@@ -5,15 +5,6 @@ from rest_framework import serializers
 BookshelfUser = get_user_model()
 
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = BookshelfUser
-        fields = (
-            'username',
-            'email'
-        )
-
-
 class RegisterSerializer(serializers.ModelSerializer):
     """
     Basic Register Serializer
@@ -57,7 +48,22 @@ class RegisterSerializer(serializers.ModelSerializer):
         return user
 
 
+class UserSerializer(serializers.ModelSerializer):
+    """
+    not using
+    """
+    class Meta:
+        model = BookshelfUser
+        fields = (
+            'username',
+            'email'
+        )
+
+
 class LoginSerializer(serializers.Serializer):
+    """
+    not used
+    """
     username = serializers.CharField()
     password = serializers.CharField(write_only=True)
 

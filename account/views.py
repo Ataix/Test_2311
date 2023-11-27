@@ -25,4 +25,7 @@ class UserRegisterView(APIView):
 
 
 class LoginView(APIView):
+    """
+    not implemented
+    """
     pass
