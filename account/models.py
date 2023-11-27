@@ -5,6 +5,9 @@ from django.db import models
 
 
 class BookshelfManager(BaseUserManager):
+    """
+    Modified Manager with autofilling register date.
+    """
     def _create_user(self, username, email, password, **kwargs):
         if not username:
             raise ValueError('username required')
@@ -32,6 +35,10 @@ class BookshelfManager(BaseUserManager):
 
 
 class BookshelfUser(AbstractBaseUser):
+    """
+    Modified AbstractBaseUser model required username and email fields.
+    Register date fills automatically.
+    """
     username = models.CharField(max_length=50, unique=True)
     email = models.EmailField(unique=True)
     register_date = models.DateTimeField(auto_now_add=True)

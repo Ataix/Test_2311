@@ -11,6 +11,11 @@ from Test_2311 import settings
 class EmailBackend(SMTPBackend):
     @cached_property
     def ssl_context(self):
+        """
+        Created since built-in django.core.mail.send_mail doesn't work.
+        (Certificates related issue)
+        :return:
+        """
         if self.ssl_certfile or self.ssl_keyfile:
             ssl_context = ssl.SSLContext(protocol=ssl.PROTOCOL_TLS_CLIENT)
             ssl_context.load_cert_chain(self.ssl_certfile, self.ssl_keyfile)

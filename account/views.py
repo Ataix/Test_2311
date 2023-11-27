@@ -11,6 +11,11 @@ BookshelfUser = get_user_model()
 
 class UserRegisterView(APIView):
     def post(self, request):
+        """
+        Post request for registration. Contains celery task.
+        :param request:
+        :return:
+        """
         data = request.data
         serializer = RegisterSerializer(data=data)
         if serializer.is_valid(raise_exception=True):
