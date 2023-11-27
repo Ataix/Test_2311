@@ -1,11 +1,7 @@
 import ssl
 
-from celery import shared_task
 from django.core.mail.backends.smtp import EmailBackend as SMTPBackend
 from django.utils.functional import cached_property
-from django.core.mail import send_mail
-
-from Test_2311 import settings
 
 
 class EmailBackend(SMTPBackend):

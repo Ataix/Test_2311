@@ -7,9 +7,6 @@ BookshelfUser = get_user_model()
 
 @admin.register(BookshelfUser)
 class ProfileAdmin(admin.ModelAdmin):
-    # readonly_fields = (
-    #     'register_date',
-    # )
 
     list_display = (
         'username',
