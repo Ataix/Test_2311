@@ -1,6 +1,6 @@
 from django.urls import path
 
-from bookshelf.views import BookListView, BookCreateView, BookViewSet
+from .views import BookListView, BookCreateView, BookViewSet
 
 urlpatterns = [
     path('books_list/', BookListView.as_view()),

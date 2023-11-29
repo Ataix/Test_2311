@@ -1,5 +1,5 @@
 """
-ASGI config for Test_2311 project.
+ASGI config for dockerfiles project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

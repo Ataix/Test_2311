@@ -4,9 +4,9 @@ from rest_framework.generics import (
 from rest_framework.permissions import IsAdminUser
 from rest_framework.viewsets import ViewSetMixin
 
-from bookshelf.models import Book
+from .models import Book
 
-from bookshelf.serializers import BookSerializer
+from .serializers import BookSerializer
 
 
 class BookListView(ListAPIView):

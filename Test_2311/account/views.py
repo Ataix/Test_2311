@@ -3,8 +3,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from account.serializers import RegisterSerializer
-from account.tasks import send_welcome_email_task
+from .serializers import RegisterSerializer
+from .tasks import send_welcome_email_task
 
 BookshelfUser = get_user_model()
 
